@@ -9,90 +9,62 @@
       rel="stylesheet"
       type="text/css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
-  <body class="bg-gray-100">
+  <body
+    class="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-600 flex items-center justify-center min-h-screen"
+  >
     <div
-      class="w-full max-w-sm p-6 bg-white rounded-lg shadow-md mx-auto mt-4 text-center"
+      class="glass-bg bg-white p-6 rounded-lg shadow-md w-full max-w-md mx-auto backdrop-blur-md bg-opacity-40"
     >
-      <h2 class="text-3xl font-semibold mb-2">
+      <h2 class="text-3xl font-semibold mb-4 text-center text-gray-800">
         First Security Islami Bank Limited
       </h2>
-      <h2 class="text-xl font-semibold mb-2">
+      <h2 class="text-xl font-semibold mb-2 text-center text-gray-600">
         Welcome to our secure login portal
       </h2>
-      <p class="text-gray-600">Please enter your credentials to proceed.</p>
-    </div>
+      <p class="text-gray-600 text-center">
+        Please enter your credentials to proceed.
+      </p>
 
-    <div class="bg-white p-8 rounded-lg shadow-md max-w-sm mx-auto mt-6">
-      <h2 class="text-xl font-semibold mb-4">User Credentials</h2>
-      <form>
+      <form class="mt-6">
         <div class="mb-4">
-          <label for="username" class="block text-sm font-medium text-gray-700"
-            >Username</label
-          >
+          <label for="username" class="block text-sm font-medium text-gray-700">
+            Username
+          </label>
           <input
             type="text"
             id="username"
             name="username"
-            class="mt-1 block w-full rounded-md border-black border-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            class="mt-1 focus:ring-indigo-300 focus:border-indigo-300 block w-full p-2 sm:text-sm border-gray-300 rounded-md"
           />
         </div>
-        <div class="mb-4">
-          <label for="password" class="block text-sm font-medium text-gray-700"
-            >Password</label
-          >
+        <div class="mb-6">
+          <label for="password" class="block text-sm font-medium text-gray-700">
+            Password
+          </label>
           <input
             type="password"
             id="password"
             name="password"
-            class="mt-1 block w-full rounded-md border-black border-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            class="mt-1 focus:ring-indigo-300 focus:border-indigo-300 block w-full p-2 sm:text-sm border-gray-300 rounded-md"
           />
         </div>
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-center">
           <button
             type="button"
-            class="px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            class="login-btn px-4 py-2 bg-indigo-500 text-white rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:ring-indigo-200 focus:ring-opacity-50 transition-colors"
             id="btn-submit"
           >
             Login
           </button>
         </div>
       </form>
-    </div>
-    <div
-      class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 hidden"
-      id="errorModal"
-    >
-      <div class="bg-white p-8 rounded-lg shadow-md max-w-sm mx-auto">
-        <div class="mb-4">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8 mx-auto text-red-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-          <h2 class="text-xl font-semibold text-center">Wrong Credentials/h2>
-          <p class="text-center">Invalid Username and Password.</p>
-        </div>
-        <div class="flex justify-center">
-          <button
-            type="button"
-            class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-200 focus:ring-opacity-50"
-            id="closeModalBtn"
-          >
-            Close
-          </button>
-        </div>
-      </div>
     </div>
     <script src="script.js"></script>
   </body>
