@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FSIB Bank</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full">
+      <h1 class="text-4xl font-bold mb-4">FSIB</h1>
+      <h1 class="text-2xl font-bold mb-4">User Dashboard</h1>
+
+      <div class="flex justify-between">
+        <div class="bg-blue-100 p-4 rounded-lg flex-grow">
+          <h2 class="text-lg font-semibold mb-2">Deposit</h2>
+          <p class="mb-2">Please Deposit</p>
+          <p class="text-green-600">
+            <span class="text-xl">BDT</span>
+            <span id="total-deposit">0.00</span>
+          </p>
+        </div>
+        <div class="bg-red-100 p-4 rounded-lg ml-4 flex-grow">
+          <h2 class="text-lg font-semibold mb-2">Withdraw</h2>
+          <p class="mb-2">Please Withdraw</p>
+          <p class="text-red-600"><span class="text-xl">BDT</span> 0.00</p>
+        </div>
+        <div class="bg-green-100 p-4 rounded-lg ml-4 flex-grow">
+          <h2 class="text-lg font-semibold mb-2">Balance</h2>
+          <p class="mb-2">Your Balance</p>
+          <p class="text-blue-600"><span class="text-xl">BDT</span> 2000.00</p>
+        </div>
+      </div>
+
+      <form class="mt-4">
+        <label for="deposit" class="block font-medium mb-2"
+          >Deposit Amount:</label
+        >
+        <input
+          type="number"
+          id="deposit"
+          name="deposit"
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+          placeholder="Enter amount"
+        />
+        <button
+          type="button"
+          id="btn-deposit"
+          class="mt-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+        >
+          Deposit
+        </button>
+      </form>
+
+      <form class="mt-4">
+        <label for="withdraw" class="block font-medium mb-2"
+          >Withdraw Amount:</label
+        >
+        <input
+          type="number"
+          id="withdraw"
+          name="withdraw"
+          class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+          placeholder="Enter amount"
+        />
+        <button
+          type="submit"
+          class="mt-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 focus:outline-none focus:ring focus:border-red-300"
+        >
+          Withdraw
+        </button>
+      </form>
+    </div>
+    <script src="deposit.js"></script>
+  </body>
+</html>
