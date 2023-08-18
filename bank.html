@@ -9,33 +9,33 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-gray-100 flex justify-center items-center h-screen">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full">
-      <h1 class="text-4xl font-bold mb-4">FSIB</h1>
-      <h1 class="text-2xl font-bold mb-4">User Dashboard</h1>
+  <body class="bg-gray-100 min-h-screen flex justify-center items-center">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-xl">
+      <h1 class="text-4xl font-bold mb-4 text-center">FSIB Bank</h1>
+      <h2 class="text-2xl font-bold mb-4 text-center">User Dashboard</h2>
 
-      <div class="flex justify-between">
+      <div class="flex space-x-4">
         <div class="bg-blue-100 p-4 rounded-lg flex-grow">
-          <h2 class="text-lg font-semibold mb-2">Deposit</h2>
-          <p class="mb-2">Please Deposit</p>
-          <p class="text-green-600">
-            <span class="text-xl">BDT</span>
+          <h3 class="text-lg font-semibold mb-2 text-blue-800">Deposit</h3>
+          <p class="mb-2 text-blue-600">Please Deposit</p>
+          <p class="text-blue-600 text-xl">
+            <span>BDT</span>
             <span id="total-deposit">0.00</span>
           </p>
         </div>
-        <div class="bg-red-100 p-4 rounded-lg ml-4 flex-grow">
-          <h2 class="text-lg font-semibold mb-2">Withdraw</h2>
-          <p class="mb-2">Please Withdraw</p>
-          <p class="text-red-600">
-            <span class="text-xl">BDT</span>
+        <div class="bg-red-100 p-4 rounded-lg flex-grow">
+          <h3 class="text-lg font-semibold mb-2 text-red-800">Withdraw</h3>
+          <p class="mb-2 text-red-600">Please Withdraw</p>
+          <p class="text-red-600 text-xl">
+            <span>BDT</span>
             <span id="total-withdraw">0.00</span>
           </p>
         </div>
-        <div class="bg-green-100 p-4 rounded-lg ml-4 flex-grow">
-          <h2 class="text-lg font-semibold mb-2">Balance</h2>
-          <p class="mb-2">Your Balance</p>
-          <p class="text-blue-600">
-            <span class="text-xl">BDT</span>
+        <div class="bg-green-100 p-4 rounded-lg flex-grow">
+          <h3 class="text-lg font-semibold mb-2 text-green-800">Balance</h3>
+          <p class="mb-2 text-green-600">Your Balance</p>
+          <p class="text-green-600 text-xl">
+            <span>BDT</span>
             <span id="total-balance">2000.00</span>
           </p>
         </div>
@@ -80,8 +80,15 @@
           Withdraw
         </button>
       </form>
+
+      <div class="mt-4">
+        <h2 class="text-lg font-semibold mb-2">Transaction History</h2>
+        <ul id="transaction-list" class="list-disc pl-6"></ul>
+      </div>
     </div>
-    <script src="deposit.js"></script>
-    <script src="withdraw.js"></script>
+
+    <script src="withdraw.js" type="module"></script>
+    <script src="deposit.js" type="module"></script>
+    <script src="transaction-history.js" type="module"></script>
   </body>
 </html>

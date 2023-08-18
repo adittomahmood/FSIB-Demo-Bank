@@ -1,3 +1,5 @@
+import { updateTransactionHistory } from "./transaction-history.js";
+
 document.getElementById("btn-withdraw").addEventListener("click", function () {
   let withdrawAmount = parseFloat(document.getElementById("withdraw").value);
   let currentWithdraw =
@@ -8,6 +10,8 @@ document.getElementById("btn-withdraw").addEventListener("click", function () {
   let newBalance =
     parseFloat(document.getElementById("total-balance").innerText) -
     withdrawAmount;
-  document.getElementById("total-balance").innerText = newBalance;
+  document.getElementById("total-balance").innerText = newBalance.toFixed(2);
   document.getElementById("withdraw").value = "";
+
+  updateTransactionHistory("Withdrawn", withdrawAmount);
 });

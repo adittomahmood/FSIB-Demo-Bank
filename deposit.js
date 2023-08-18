@@ -1,3 +1,5 @@
+import { updateTransactionHistory } from "./transaction-history.js";
+
 document.getElementById("btn-deposit").addEventListener("click", function () {
   let depositAmount = parseFloat(document.getElementById("deposit").value);
   let previousAmount = parseFloat(
@@ -11,4 +13,6 @@ document.getElementById("btn-deposit").addEventListener("click", function () {
     depositAmount;
   document.getElementById("total-balance").innerText =
     currentBalance.toFixed(2);
+
+  updateTransactionHistory("Deposited", depositAmount);
 });
