@@ -63,9 +63,21 @@
           >
             Login
           </button>
-        </div>
+          <div id="errorModal" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+            <div class="bg-white p-6 rounded-md shadow-lg text-center">
+              <p class="text-red-500 mb-4">Incorrect email or password. Please try again.</p>
+              <button
+                id="closeModalBtn"
+                class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring focus:ring-red-200 focus:ring-opacity-50 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+          
       </form>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
